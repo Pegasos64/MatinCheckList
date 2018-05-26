@@ -109,6 +109,7 @@
             this.tb_ass.Name = "tb_ass";
             this.tb_ass.Size = new System.Drawing.Size(148, 20);
             this.tb_ass.TabIndex = 8;
+            this.tb_ass.Click += new System.EventHandler(this.tb_ass_Click);
             // 
             // tb_info
             // 
@@ -147,6 +148,7 @@
             this.Controls.Add(this.b_add);
             this.Name = "Add_task";
             this.Text = "Add Task";
+            this.Load += new System.EventHandler(this.Add_task_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
