@@ -9,5 +9,6 @@ namespace MatinCheckList
     class testiluokka
     {
         public int x = 4;
+        public int y = 6;
     }
 }
