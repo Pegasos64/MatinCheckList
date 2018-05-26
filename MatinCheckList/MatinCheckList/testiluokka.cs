@@ -8,5 +8,6 @@ namespace MatinCheckList
 {
     class testiluokka
     {
+        public int x = 4;
     }
 }
