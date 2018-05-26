@@ -8,5 +8,16 @@ namespace MatinCheckList
 {
     class testiluokka
     {
+        public int x = 4;
+        public int y = 6;
+
+        public int tulos;
+
+        private void LaskeTulos()
+        {
+            tulos = x + y;
+        }
+
+
     }
 }
