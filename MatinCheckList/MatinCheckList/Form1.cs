@@ -17,9 +17,10 @@ namespace MatinCheckList
             InitializeComponent();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void b_add_Click(object sender, EventArgs e)
         {
-
+            Add_task add_window = new Add_task();
+            add_window.Show();
         }
     }
 }

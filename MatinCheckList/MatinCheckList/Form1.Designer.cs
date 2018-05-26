@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("Tehty", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup4 = new System.Windows.Forms.ListViewGroup("Odottaa", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("sdfdfs");
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("Koodaillaan");
+            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("Tehty", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("Odottaa", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("sdfdfs");
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Koodaillaan");
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.b_add = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
             this.Nimi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Tila = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -79,34 +79,34 @@
             this.button4.Text = "button4";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // b_add
             // 
-            this.button5.Location = new System.Drawing.Point(91, 466);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Add Task";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.b_add.Location = new System.Drawing.Point(91, 466);
+            this.b_add.Name = "b_add";
+            this.b_add.Size = new System.Drawing.Size(75, 23);
+            this.b_add.TabIndex = 4;
+            this.b_add.Text = "Add Task";
+            this.b_add.UseVisualStyleBackColor = true;
+            this.b_add.Click += new System.EventHandler(this.b_add_Click);
             // 
             // listView1
             // 
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Nimi,
             this.Tila});
-            listViewGroup3.Header = "Tehty";
-            listViewGroup3.Name = "Tehty";
-            listViewGroup3.Tag = "sdf";
-            listViewGroup4.Header = "Odottaa";
-            listViewGroup4.Name = "Odottaa";
+            listViewGroup1.Header = "Tehty";
+            listViewGroup1.Name = "Tehty";
+            listViewGroup1.Tag = "sdf";
+            listViewGroup2.Header = "Odottaa";
+            listViewGroup2.Name = "Odottaa";
             this.listView1.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup3,
-            listViewGroup4});
-            listViewItem3.Group = listViewGroup3;
-            listViewItem4.Group = listViewGroup4;
+            listViewGroup1,
+            listViewGroup2});
+            listViewItem1.Group = listViewGroup1;
+            listViewItem2.Group = listViewGroup2;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem3,
-            listViewItem4});
+            listViewItem1,
+            listViewItem2});
             this.listView1.Location = new System.Drawing.Point(12, 122);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(472, 283);
@@ -130,7 +130,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(528, 521);
             this.Controls.Add(this.listView1);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.b_add);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -147,7 +147,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button b_add;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader Nimi;
         private System.Windows.Forms.ColumnHeader Tila;

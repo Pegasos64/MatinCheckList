@@ -11,17 +11,33 @@ namespace MatinCheckList
     {
         TEHTY, KESKEN, LUOTU, PERUTTU, POISTETTU
     }
+    public enum taskImportance
+    {
+        HIGH, MEDIUM, LOW
+    }
 
     class Tehtava
     {
-        public taskState tila;
-        public string nimi;
+        public taskState state;
+        public string topic;
+        public string information;
+        public string assignee;
+        public taskImportance importance;
 
-        public Tehtava(string nimi)
+        public Tehtava(string topic)
         {
-            this.tila = taskState.LUOTU;
-            this.nimi = nimi;
-
+            this.state = taskState.LUOTU;
+            this.topic = topic;
+            this.assignee = "not assigned";
+            this.importance = taskImportance.MEDIUM;
+        }
+        public Tehtava(string topic, string information, string assignee, taskImportance importance)
+        {
+            this.state = taskState.LUOTU;
+            this.topic = topic;
+            this.information = information;
+            this.assignee = assignee;
+            this.importance = importance;
         }
     }
 }

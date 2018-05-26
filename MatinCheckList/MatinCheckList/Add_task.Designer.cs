@@ -102,7 +102,6 @@
             this.tb_topic.Name = "tb_topic";
             this.tb_topic.Size = new System.Drawing.Size(148, 20);
             this.tb_topic.TabIndex = 6;
-            this.tb_topic.TextChanged += new System.EventHandler(this.tb_topic_TextChanged);
             // 
             // tb_ass
             // 
@@ -110,7 +109,6 @@
             this.tb_ass.Name = "tb_ass";
             this.tb_ass.Size = new System.Drawing.Size(148, 20);
             this.tb_ass.TabIndex = 8;
-            this.tb_ass.TextChanged += new System.EventHandler(this.tb_ass_TextChanged);
             // 
             // tb_info
             // 
@@ -119,7 +117,6 @@
             this.tb_info.Name = "tb_info";
             this.tb_info.Size = new System.Drawing.Size(148, 92);
             this.tb_info.TabIndex = 9;
-            this.tb_info.TextChanged += new System.EventHandler(this.tb_info_TextChanged);
             // 
             // cb_imp
             // 

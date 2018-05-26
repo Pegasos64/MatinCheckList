@@ -17,14 +17,11 @@ namespace MatinCheckList
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void b_add_Click(object sender, EventArgs e)
         {
-
+            Tehtava t = new Tehtava(tb_topic.Text, tb_info.Text, tb_ass.Text, (taskImportance) cb_imp.SelectedIndex);
+            MessageBox.Show("Task: " + tb_topic.Text + " added");
+            this.Close();
         }
 
         private void b_cancel_Click(object sender, EventArgs e)
@@ -32,19 +29,6 @@ namespace MatinCheckList
 
         }
 
-        private void tb_topic_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tb_info_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tb_ass_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }
