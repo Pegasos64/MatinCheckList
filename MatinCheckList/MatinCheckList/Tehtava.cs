@@ -23,14 +23,18 @@ namespace MatinCheckList
         public string information;
         public string assignee;
         public taskImportance importance;
+        public DateTime time;
+        public DateTime due;
 
-        public Tehtava(string topic, string information, string assignee, taskImportance importance)
+        public Tehtava(string topic, string information, string assignee, taskImportance importance, DateTime time, DateTime due)
         {
             this.state = taskState.LUOTU;
             this.topic = topic;
             this.information = information;
             this.assignee = assignee;
             this.importance = importance;
+            this.time = time;
+            this.due = due;
         }
     }
 }

@@ -109,7 +109,7 @@
             listViewItem2});
             this.listView1.Location = new System.Drawing.Point(12, 122);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(472, 283);
+            this.listView1.Size = new System.Drawing.Size(216, 139);
             this.listView1.TabIndex = 5;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;

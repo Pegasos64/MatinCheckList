@@ -38,11 +38,13 @@
             this.tb_ass = new System.Windows.Forms.TextBox();
             this.tb_info = new System.Windows.Forms.TextBox();
             this.cb_imp = new System.Windows.Forms.ComboBox();
+            this.l_due = new System.Windows.Forms.Label();
+            this.dt_due = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // b_add
             // 
-            this.b_add.Location = new System.Drawing.Point(34, 212);
+            this.b_add.Location = new System.Drawing.Point(22, 266);
             this.b_add.Name = "b_add";
             this.b_add.Size = new System.Drawing.Size(89, 39);
             this.b_add.TabIndex = 0;
@@ -52,7 +54,7 @@
             // 
             // b_cancel
             // 
-            this.b_cancel.Location = new System.Drawing.Point(129, 212);
+            this.b_cancel.Location = new System.Drawing.Point(151, 266);
             this.b_cancel.Name = "b_cancel";
             this.b_cancel.Size = new System.Drawing.Size(89, 39);
             this.b_cancel.TabIndex = 1;
@@ -131,11 +133,33 @@
             this.cb_imp.Size = new System.Drawing.Size(121, 21);
             this.cb_imp.TabIndex = 10;
             // 
+            // l_due
+            // 
+            this.l_due.AutoSize = true;
+            this.l_due.Location = new System.Drawing.Point(19, 219);
+            this.l_due.Name = "l_due";
+            this.l_due.Size = new System.Drawing.Size(54, 13);
+            this.l_due.TabIndex = 11;
+            this.l_due.Text = "Due date:";
+            // 
+            // dt_due
+            // 
+            this.dt_due.Location = new System.Drawing.Point(92, 219);
+            this.dt_due.MinDate = new System.DateTime(2018, 5, 27, 0, 0, 0, 0);
+            this.dt_due.Name = "dt_due";
+            this.dt_due.Size = new System.Drawing.Size(148, 20);
+            this.dt_due.TabIndex = 12;
+            this.dt_due.Value = new System.DateTime(2018, 5, 27, 15, 52, 22, 0);
+            this.dt_due.ValueChanged += new System.EventHandler(this.dt_due_ValueChanged);
+            this.dt_due.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dt_due_KeyDown);
+            // 
             // Add_task
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(297, 315);
+            this.Controls.Add(this.dt_due);
+            this.Controls.Add(this.l_due);
             this.Controls.Add(this.cb_imp);
             this.Controls.Add(this.tb_info);
             this.Controls.Add(this.tb_ass);
@@ -166,5 +190,7 @@
         private System.Windows.Forms.TextBox tb_ass;
         private System.Windows.Forms.TextBox tb_info;
         private System.Windows.Forms.ComboBox cb_imp;
+        private System.Windows.Forms.Label l_due;
+        private System.Windows.Forms.DateTimePicker dt_due;
     }
 }

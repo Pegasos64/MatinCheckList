@@ -25,7 +25,7 @@ namespace MatinCheckList
             {
                 return;
             }
-            Tehtava t = new Tehtava(tb_topic.Text, tb_info.Text, tb_ass.Text, (taskImportance) cb_imp.SelectedIndex);
+            Tehtava t = new Tehtava(tb_topic.Text, tb_info.Text, tb_ass.Text, (taskImportance) cb_imp.SelectedIndex, DateTime.Now, dt_due.Value);
             MessageBox.Show("Task: '" + tb_topic.Text + "' added");
             this.Close();
         }
@@ -45,16 +45,44 @@ namespace MatinCheckList
             return 0;
         }
 
+        /// <summary>
+        /// Initializes "Add Task" window
+        /// </summary>
         private void Add_task_Load(object sender, EventArgs e)
         {
             cb_imp.SelectedIndex = 1;
             tb_ass.Text = "not assigned";
+            dt_due.CustomFormat = " ";
+            dt_due.Format = DateTimePickerFormat.Custom;
         }
 
+        /// <summary>
+        /// selects "not assigned"-text for easier user experience
+        /// </summary>
         private void tb_ass_Click(object sender, EventArgs e)
         {
             tb_ass.SelectionStart = 0;
             tb_ass.SelectionLength = tb_ass.Text.Length;
         }
-    }
+
+        private void dt_due_ValueChanged(object sender, EventArgs e)
+        {
+            dt_due.CustomFormat = "dd/MM/yyyy";
+        }
+
+        private void dt_due_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyData == Keys.Delete)
+            {
+                dt_due.CustomFormat = " ";
+                dt_due.Format = DateTimePickerFormat.Custom;
+            }
+            if(e.KeyData == Keys.Back)
+            {
+                dt_due.CustomFormat = " ";
+                dt_due.Format = DateTimePickerFormat.Custom;
+            }
+        }
+
+        }
 }
