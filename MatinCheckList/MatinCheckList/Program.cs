@@ -8,6 +8,8 @@ namespace MatinCheckList
 {
     static class Program
     {
+        public static Rajapinta R = new Rajapinta();
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

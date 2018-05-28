@@ -18,7 +18,15 @@ namespace MatinCheckList
         private string connectionString;
         private MySqlConnection connection;
 
-        private void Login(string user, string password)
+
+        /// <summary>
+        /// Attempts to login to the database, 
+        /// returns -1 if succesfull, errornumber otherwise
+        /// </summary>
+        /// <param name="user"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
+        private int Login(string user, string password)
         {
             connectionString = 
                 "SERVER=" + _server + 
@@ -27,7 +35,7 @@ namespace MatinCheckList
                 ";PASSWORD=" + password + 
                 ";";
             connection = new MySqlConnection(connectionString + "SSLMode=none");
-
+            return DiagnoseConnection();
         }
 
         public Rajapinta()
