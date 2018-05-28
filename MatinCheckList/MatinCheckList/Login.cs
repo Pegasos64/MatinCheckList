@@ -19,6 +19,14 @@ namespace MatinCheckList
 
         private void b_login_Click(object sender, EventArgs e)
         {
+            int err = Program.R.Login(tb_user.Text, tb_password.Text);
+            if (err != -1)
+            {
+                MessageBox.Show("Kirjautuminen ei onnistunut. Virhekoodi: " + err);
+            }else
+            {
+                MessageBox.Show("Kirjautuminen onnistui mainiosti!");
+            }
             
         }
     }
