@@ -25,7 +25,8 @@ namespace MatinCheckList
                 return;
             }
             Tehtava t = new Tehtava(tb_topic.Text, tb_info.Text, tb_ass.Text, (taskImportance) cb_imp.SelectedIndex, DateTime.Now, dt_due.Value);
-            MessageBox.Show("Task: '" + tb_topic.Text + "' added");
+            int x = Program.R.InsertTask(t);
+            MessageBox.Show("Task: '" + tb_topic.Text + "' added (" +x+")");
             this.Close();
         }
 
