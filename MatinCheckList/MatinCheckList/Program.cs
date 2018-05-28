@@ -9,6 +9,8 @@ namespace MatinCheckList
     static class Program
     {
         public static Rajapinta R = new Rajapinta();
+        public static Home H;
+        public static Login L;
 
         /// <summary>
         /// The main entry point for the application.
@@ -18,7 +20,8 @@ namespace MatinCheckList
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            L = new Login();
+            Application.Run(L);
         }
     }
 }
