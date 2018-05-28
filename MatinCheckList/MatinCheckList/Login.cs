@@ -10,22 +10,16 @@ using System.Windows.Forms;
 
 namespace MatinCheckList
 {
-    public partial class Home : Form
+    public partial class Login : Form
     {
-        public Home()
+        public Login()
         {
             InitializeComponent();
         }
 
-        private void b_add_Click(object sender, EventArgs e)
+        private void b_login_Click(object sender, EventArgs e)
         {
-            Add_task add_window = new Add_task();
-            add_window.Show();
-        }
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            
         }
     }
 }

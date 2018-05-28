@@ -12,7 +12,6 @@ namespace MatinCheckList
 {
     public partial class Add_task : Form
     {
-        int i = 0;
 
         public Add_task()
         {
