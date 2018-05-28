@@ -6,6 +6,7 @@ using System.Data;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace MatinCheckList
 {
@@ -28,11 +29,11 @@ namespace MatinCheckList
         /// <returns></returns>
         public int Login(string user, string password)
         {
-            connectionString = 
-                "SERVER=" + _server + 
-                ";DATABASE=" + _database + 
-                ";UID=" + user + 
-                ";PASSWORD=" + password + 
+            connectionString =
+                "SERVER=" + _server +
+                ";DATABASE=" + _database +
+                ";UID=" + user +
+                ";PASSWORD=" + password +
                 ";";
             connection = new MySqlConnection(connectionString + "SSLMode=none");
             return DiagnoseConnection();
@@ -40,7 +41,7 @@ namespace MatinCheckList
 
         public Rajapinta()
         {
-            
+
         }
 
 
@@ -150,25 +151,14 @@ namespace MatinCheckList
             return column_names;
         }
 
-        public int InsertTask(string name, taskState state, int importance, string assignee, string information, DateTime due)
-        {
-            List<string> columns = GetColumnNames("tehtavat");
-            string query = "INSERT INTO tehtavat ";
-            query += "(task_State, task_Name, task_Importance, task_Assignee,";
-            query += "task_Information, task_DueDate) VALUES (";
-            query += state.ToString() + "," + name + "," + importance + "," + assignee + ",";
-            query += information + "," + due + ")";
-            MessageBox.Show("SQL query : " + query);
-            return BasicQuery(query);
-        }
         public int InsertTask(Tehtava t)
         {
             List<string> columns = GetColumnNames("tehtavat");
             string query = "INSERT INTO tehtavat ";
             query += "(task_State, task_Name, task_Importance, task_Assignee,";
             query += "task_Information, task_DueDate) VALUES (";
-            query += (int)t.state + "," + t.topic+ "," + (int)t.importance + "," + t.assignee + ",";
-            query += t.information + "," + t.due + ")";
+            query += (int)t.state + ",'" + t.topic + "'," + (int)t.importance + ",'" + t.assignee + "','";
+            query += t.information + "','" + t.due.ToString("yyyy-MM-dd hh:mm:ss", CultureInfo.InvariantCulture) + "');";
             MessageBox.Show("SQL query : " + query);
             return BasicQuery(query);
         }
