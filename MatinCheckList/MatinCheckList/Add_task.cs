@@ -67,7 +67,7 @@ namespace MatinCheckList
 
         private void dt_due_ValueChanged(object sender, EventArgs e)
         {
-            dt_due.CustomFormat = "dd/MM/yyyy";
+            dt_due.CustomFormat = "dd-MM-yyyy hh:mm:ss";
         }
 
         private void dt_due_KeyDown(object sender, KeyEventArgs e)
