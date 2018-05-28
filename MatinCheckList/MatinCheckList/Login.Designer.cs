@@ -65,6 +65,7 @@
             // 
             this.tb_password.Location = new System.Drawing.Point(108, 63);
             this.tb_password.Name = "tb_password";
+            this.tb_password.PasswordChar = '*';
             this.tb_password.Size = new System.Drawing.Size(100, 20);
             this.tb_password.TabIndex = 3;
             // 
@@ -86,6 +87,7 @@
             this.b_cancel.TabIndex = 5;
             this.b_cancel.Text = "Cancel";
             this.b_cancel.UseVisualStyleBackColor = true;
+            this.b_cancel.Click += new System.EventHandler(this.b_cancel_Click);
             // 
             // Login
             // 

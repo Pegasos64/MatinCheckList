@@ -27,5 +27,10 @@ namespace MatinCheckList
         {
 
         }
+
+        private void Home_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Program.L.Close();
+        }
     }
 }

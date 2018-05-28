@@ -23,11 +23,18 @@ namespace MatinCheckList
             if (err != -1)
             {
                 MessageBox.Show("Kirjautuminen ei onnistunut. Virhekoodi: " + err);
-            }else
+            } else
             {
-                MessageBox.Show("Kirjautuminen onnistui mainiosti!");
+                //MessageBox.Show("Kirjautuminen onnistui mainiosti!");
+                Program.H = new Home();
+                Program.L.Hide();
+                Program.H.Show();
             }
-            
+        }
+
+        private void b_cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("Tehty", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("Odottaa", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("sdfdfs");
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Koodaillaan");
+            System.Windows.Forms.ListViewGroup listViewGroup5 = new System.Windows.Forms.ListViewGroup("Tehty", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup6 = new System.Windows.Forms.ListViewGroup("Odottaa", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("sdfdfs");
+            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem("Koodaillaan");
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -94,19 +94,19 @@
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Nimi,
             this.Tila});
-            listViewGroup1.Header = "Tehty";
-            listViewGroup1.Name = "Tehty";
-            listViewGroup1.Tag = "sdf";
-            listViewGroup2.Header = "Odottaa";
-            listViewGroup2.Name = "Odottaa";
+            listViewGroup5.Header = "Tehty";
+            listViewGroup5.Name = "Tehty";
+            listViewGroup5.Tag = "sdf";
+            listViewGroup6.Header = "Odottaa";
+            listViewGroup6.Name = "Odottaa";
             this.listView1.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup1,
-            listViewGroup2});
-            listViewItem1.Group = listViewGroup1;
-            listViewItem2.Group = listViewGroup2;
+            listViewGroup5,
+            listViewGroup6});
+            listViewItem5.Group = listViewGroup5;
+            listViewItem6.Group = listViewGroup6;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2});
+            listViewItem5,
+            listViewItem6});
             this.listView1.Location = new System.Drawing.Point(12, 122);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(472, 283);
@@ -138,6 +138,7 @@
             this.Controls.Add(this.button1);
             this.Name = "Home";
             this.Text = "Home";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Home_FormClosing);
             this.ResumeLayout(false);
 
         }
