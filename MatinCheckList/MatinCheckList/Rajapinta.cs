@@ -26,7 +26,7 @@ namespace MatinCheckList
         /// <param name="user"></param>
         /// <param name="password"></param>
         /// <returns></returns>
-        private int Login(string user, string password)
+        public int Login(string user, string password)
         {
             connectionString = 
                 "SERVER=" + _server + 
