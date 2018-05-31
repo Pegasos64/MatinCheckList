@@ -151,6 +151,11 @@ namespace MatinCheckList
             return column_names;
         }
 
+        /// <summary>
+        /// Inserts task t into table tehtavat
+        /// </summary>
+        /// <param name="t"></param>
+        /// <returns></returns>
         public int InsertTask(Tehtava t)
         {
             List<string> columns = GetColumnNames("tehtavat");
